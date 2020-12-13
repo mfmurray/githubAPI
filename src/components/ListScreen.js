@@ -24,7 +24,11 @@ const ListScreen = (props) => {
   const renderItem = ({ item }) => (
     <ListItem
       author={item.author}
+      authorUrl={item.authorUrl}
+      iconUrl={item.iconUrl}
+      message={item.message}
       hash={item.hash}
+      hashUrl={item.hashUrl}
     />
   );
 
