@@ -5,13 +5,15 @@ import { useDispatch, useSelector  } from 'react-redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import ListScreen from '../components/ListScreen.js'
 
 const MainContainer = (props) => {
   const {addingCommitsDone, addingCommits, addingCommitsError} = props;
 
   return (
     <SafeAreaView style={{flex:1}}>
-      <Text>Main Container</Text>
+      <ListScreen
+      />
     </SafeAreaView>
   );
 }
