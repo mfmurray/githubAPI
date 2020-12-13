@@ -11,9 +11,17 @@ const ListItem = (props) => {
   <View style={styles.main}>
     <View style={styles.container}>
       <Text style={styles.textMessage}>{filteredMessage[0]}</Text>
-      <Text style={styles.textHash}> - {filteredMessage[2]}</Text>
-      <Text style={styles.textAuthor}> {props.author}</Text>
-      <Text style={styles.textHash}>{props.hash}</Text>
+      {filteredMessage[2] ?(<Text style={styles.textHash}> - {filteredMessage[2]}</Text>):(null)}
+      <TouchableOpacity style={styles.buttonAuthor} onPress={() => { Linking.openURL(props.authorUrl) }}>
+        <Image
+          style={styles.tinyLogo}
+          source={{uri: props.iconUrl}}
+        />
+        <Text style={styles.textAuthor}> {props.author}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => { Linking.openURL(props.hashUrl) }}>
+        <Text style={styles.textHash}>{props.hash}</Text>
+      </TouchableOpacity>
     </View>
   </View>
   );
@@ -25,8 +33,18 @@ const styles = StyleSheet.create({
     fontSize:15,
     fontWeight:'bold'
   },
+  tinyLogo: {
+    width: 20,
+    height: 20,
+    borderRadius:10,
+  },
   textAuthor: {
     fontSize:15,
+  },
+  buttonAuthor: {
+    flexDirection:'row',
+    alignItems:'center',
+    marginTop:20
   },
   textHash: {
     marginTop:15,
