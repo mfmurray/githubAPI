@@ -62,7 +62,3 @@ The following libraries are extensively used:
 - [react](https://reactjs.org): UI components
 - [redux](https://redux.js.org/api/api-reference), [react-redux](https://react-redux.js.org/api/connect)
 - [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html): validations for UI component inputs
-
-## Production builds, beta distributions & releases
-
-These use Fastlane. See `./.circleci/README.md`.
