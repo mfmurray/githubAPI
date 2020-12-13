@@ -6,6 +6,11 @@ import { useDispatch, useSelector  } from 'react-redux';
 const ListScreen = (props) => {
   const {addingCommitsDone, addingCommits, addingCommitsError} = props;
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: 'ADD_COMMITS'})
+  }, []);
 
   return (
     <View>
