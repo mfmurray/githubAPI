@@ -20,10 +20,22 @@ const ListScreen = (props) => {
     }
   }, [addingCommitsDone]);
 
+  const renderItem = ({ item }) => (
+    <View>
+      <Text>{item.author}</Text>
+      <Text>{item.hash}</Text>
+    </View>
+  );
+
   return (
     <View>
-      <Text>ListScreen</Text>
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={item => item.hash}
+      />
     </View>
+
   );
 };
 
