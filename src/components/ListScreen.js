@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, FlatList } from "react
 import { useDispatch, useSelector  } from 'react-redux';
 
 import {filterCommits} from '../helpers/filterCommits'
+import ListItem from './ListItem.js'
 
 const ListScreen = (props) => {
   const {addingCommitsDone, addingCommits, addingCommitsError} = props;
@@ -21,10 +22,10 @@ const ListScreen = (props) => {
   }, [addingCommitsDone]);
 
   const renderItem = ({ item }) => (
-    <View>
-      <Text>{item.author}</Text>
-      <Text>{item.hash}</Text>
-    </View>
+    <ListItem
+      author={item.author}
+      hash={item.hash}
+    />
   );
 
   return (
