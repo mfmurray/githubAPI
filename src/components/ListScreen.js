@@ -34,6 +34,8 @@ const ListScreen = (props) => {
 
   return (
     <View>
+      {addingCommits ? (<Text>Loading</Text>):(null)}
+      {addingCommitsError ? (<Text>Error</Text>):(null)}
       <FlatList
         data={data}
         renderItem={renderItem}
