@@ -17,6 +17,9 @@ const MainContainer = (props) => {
         addingCommits={addingCommits}
         addingCommitsError={addingCommitsError}
       />
+      <StatusBar
+        barStyle="dark-content"
+      />
     </SafeAreaView>
   );
 }
