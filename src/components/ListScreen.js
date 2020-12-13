@@ -4,6 +4,7 @@ import { useDispatch, useSelector  } from 'react-redux';
 
 
 const ListScreen = (props) => {
+  const {addingCommitsDone, addingCommits, addingCommitsError} = props;
 
 
   return (

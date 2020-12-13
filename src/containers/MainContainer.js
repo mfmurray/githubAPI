@@ -13,6 +13,9 @@ const MainContainer = (props) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <ListScreen
+        addingCommitsDone={addingCommitsDone}
+        addingCommits={addingCommits}
+        addingCommitsError={addingCommitsError}
       />
     </SafeAreaView>
   );
