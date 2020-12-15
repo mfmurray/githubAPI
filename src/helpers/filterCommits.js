@@ -1,7 +1,7 @@
 
 
 
-
+//filter commits data from api call
 export function filterCommits(commitsData) {
 
   var data=[]; var obj

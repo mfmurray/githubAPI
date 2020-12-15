@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import ListScreen from '../components/ListScreen.js'
 
 const MainContainer = (props) => {
+
+  //data from reducers
   const {addingCommitsDone, addingCommits, addingCommitsError} = props;
 
   return (
@@ -42,6 +44,7 @@ MainContainer.defaultProps = {
   addingCommitsError: null
 };
 
+//checks if data from reducers is correct type
 MainContainer.propTypes = {
   addingCommitsDone: PropTypes.array,
   addingCommits: PropTypes.bool,

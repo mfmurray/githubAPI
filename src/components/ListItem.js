@@ -5,22 +5,24 @@ import {filterMessage} from '../helpers/filterMessage'
 
 const ListItem = (props) => {
 
-  var filteredMessage = filterMessage(props.message)
+  const {message, authorUrl, iconUrl, author, hashUrl, hash} = props;
+  //The message data from each commit is filtered to an array with respect to each line break (\n)
+  var filteredMessage = filterMessage(message)
 
   return (
   <View style={styles.main}>
     <View style={styles.container}>
       <Text style={styles.textMessage}>{filteredMessage[0]}</Text>
       {filteredMessage[2] ?(<Text style={styles.textHash}> - {filteredMessage[2]}</Text>):(null)}
-      <TouchableOpacity style={styles.buttonAuthor} onPress={() => { Linking.openURL(props.authorUrl) }}>
+      <TouchableOpacity style={styles.buttonAuthor} onPress={() => { Linking.openURL(authorUrl) }}>
         <Image
           style={styles.tinyLogo}
-          source={{uri: props.iconUrl}}
+          source={{uri: iconUrl}}
         />
-        <Text style={styles.textAuthor}> {props.author}</Text>
+        <Text style={styles.textAuthor}> {author}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => { Linking.openURL(props.hashUrl) }}>
-        <Text style={styles.textHash}>{props.hash}</Text>
+      <TouchableOpacity onPress={() => { Linking.openURL(hashUrl) }}>
+        <Text style={styles.textHash}>{hash}</Text>
       </TouchableOpacity>
     </View>
   </View>
