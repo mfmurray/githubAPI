@@ -22,7 +22,6 @@ const Stack = createStackNavigator();
 import MainContainer from './src/containers/MainContainer.js';
 
 export default function App() {
-
   return (
     <Provider store={store}>
       <PersistGate

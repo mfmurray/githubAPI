@@ -1,13 +1,19 @@
 
 import { useDispatch, useSelector  } from 'react-redux';
 
+
+/*
+Commits data for API call
+addingCommits: Checks if API call is being made
+addingCommitsDone: equals commits data when API calls is finished
+addingCommitsError: detect when API call made an error
+*/
+
 const initialState = {
   addingCommits: false,
   addingCommitsDone: null,
   addingCommitsError: null,
 };
-
-
 
 const commitsReducer = (state = initialState, action) => {
   switch (action.type) {
