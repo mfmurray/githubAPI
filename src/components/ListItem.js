@@ -5,7 +5,9 @@ import {filterMessage} from '../helpers/filterMessage'
 
 const ListItem = (props) => {
 
-  var filteredMessage = filterMessage(props.message)
+  const {message} = props;
+  //The message data from each commit is filtered to an array with respect to each line break (\n)
+  var filteredMessage = filterMessage(message)
 
   return (
   <View style={styles.main}>

@@ -11,10 +11,12 @@ const ListScreen = (props) => {
   const dispatch = useDispatch();
   const [data, setData] = useState(null);
 
+  //On initializing, ADD_COMMITS is called which triggers the saga to make the api call
   useEffect(() => {
     dispatch({ type: 'ADD_COMMITS'})
   }, []);
 
+  //When addingCommitsDone data changes from api call, the data is filtered for the FlatList
   useEffect(() => {
     if (addingCommitsDone) {
       setData(filterCommits(addingCommitsDone))
