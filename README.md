@@ -1,6 +1,6 @@
 ## Description
 
-This repository is a [React Native](https://facebook.github.io/react-native/) application. It contains the source code for a mobile app which reads commits from GitHub Repository
+This repository is a [React Native](https://facebook.github.io/react-native/) application. It contains the source code for a mobile app which reads commits from GitHub this Repository
 
 ## Dependencies
 
